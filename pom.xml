@@ -1,0 +1,133 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.provinzial</groupId>
+    <artifactId>ibm-copybook-generator-base</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.2</version>
+    <modules>
+        <module>generator</module>
+        <module>maven-plugin</module>
+    </modules>
+    <name>ibm-copybook-generator Maven Mojo</name>
+    <licenses>
+        <license>
+            <name>MIT</name>
+        </license>
+    </licenses>
+    <organization>
+        <name>Provinzial Rheinland Versicherung AG</name>
+    </organization>
+    <developers>
+        <developer>
+            <name>Heiko Does</name>
+            <organization>Provinzial Rheinland Versicherung AG</organization>
+            <email>heiko.does@provinzial.com</email>
+        </developer>
+        <developer>
+            <name>Bastian Hellmann</name>
+            <organization>Provinzial Rheinland Versicherung AG</organization>
+            <email>bastian.hellmann@provinzial.com</email>
+        </developer>
+    </developers>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <org.apache.maven.plugin-tools.version>3.6.0</org.apache.maven.plugin-tools.version>
+        <maven.version>3.6.3</maven.version>
+        <maven.plugin.testing.harness.version>3.3.0</maven.plugin.testing.harness.version>
+        <junit.version>4.13</junit.version>
+        <spoon-core.version>8.1.0</spoon-core.version>
+        <junit-jupiter.version>5.6.2</junit-jupiter.version>
+        <skip.unit.tests>false</skip.unit.tests>
+    </properties>
+
+    <dependencyManagement>
+
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.maven.plugin-tools</groupId>
+                <artifactId>maven-plugin-annotations</artifactId>
+                <version>${org.apache.maven.plugin-tools.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-plugin-api</artifactId>
+                <version>${maven.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-core</artifactId>
+                <version>${maven.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-artifact</artifactId>
+                <version>${maven.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-compat</artifactId>
+                <version>${maven.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.maven.plugin-tools</groupId>
+                <artifactId>maven-plugin-tools-api</artifactId>
+                <version>${org.apache.maven.plugin-tools.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ibm</groupId>
+                <artifactId>recgen</artifactId>
+                <version>3.0.1</version>
+                <optional>true</optional>
+            </dependency>
+            <dependency>
+                <groupId>com.ibm</groupId>
+                <artifactId>ibmjzos</artifactId>
+                <version>2.4.8</version>
+                <optional>true</optional>
+            </dependency>
+            <dependency>
+                <groupId>fr.inria.gforge.spoon</groupId>
+                <artifactId>spoon-core</artifactId>
+                <version>${spoon-core.version}</version>
+            </dependency>
+            <!--Test - Dependencies-->
+            <dependency>
+                <groupId>org.apache.maven.plugin-testing</groupId>
+                <artifactId>maven-plugin-testing-harness</artifactId>
+                <scope>test</scope>
+                <version>${maven.plugin.testing.harness.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.platform</groupId>
+                <artifactId>junit-platform-launcher</artifactId>
+                <version>1.6.2</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.vintage</groupId>
+                <artifactId>junit-vintage-engine</artifactId>
+                <version>${junit-jupiter.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
