@@ -1,4 +1,4 @@
-= IBM-Copybook-com.provinzial.ibmcopybookgen.Generator Maven Plugin
+= IBM-Copybook-Generator Maven Plugin
 
 This is a maven-plugin that automates the java codegeneration from COBOL Copybooks.
 It uses the https://www.ibm.com/support/knowledgecenter/SSMQ4D_3.0.0/documentation/welcome.html[IBM Record com.provinzial.ibmcopybookgen.Generator] to generate java source code.
