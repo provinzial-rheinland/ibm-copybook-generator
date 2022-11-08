@@ -36,7 +36,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <org.apache.maven.plugin-tools.version>3.6.0</org.apache.maven.plugin-tools.version>
+        <org.apache.maven.plugin-tools.version>3.7.0</org.apache.maven.plugin-tools.version>
         <maven.version>3.6.3</maven.version>
         <maven.plugin.testing.harness.version>3.3.0</maven.plugin.testing.harness.version>
         <junit.version>4.13.2</junit.version>
