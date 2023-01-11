@@ -41,7 +41,7 @@
         <maven.plugin.testing.harness.version>3.3.0</maven.plugin.testing.harness.version>
         <junit.version>4.13.2</junit.version>
         <spoon-core.version>8.1.0</spoon-core.version>
-        <junit-jupiter.version>5.6.2</junit-jupiter.version>
+        <junit-jupiter.version>5.9.2</junit-jupiter.version>
         <skip.unit.tests>false</skip.unit.tests>
     </properties>
 
